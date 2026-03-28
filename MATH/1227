@@ -1,0 +1,17 @@
+//So this  a simple probability question it all boils down to the fact the the first passenger can either sit in the first seat or any other seat
+//lets say he in a seat i , then all the seats from 1 to i can be seated in order, after that the chaos starts
+//but it all boils down to the fact that the nth passenger has only two options i.e nth seat and the remaining random seat
+// so the prob is 1/2 for n>=2 as for n=1 theres only person so he will obviously seat in his assigned seat.
+//essentially f(n) = 1 / n + (n - 2) / n * f(n - 1)
+
+class Solution {
+    public double nthPersonGetsNthSeat(int n) 
+    {
+       if(n==1)
+       return 1;
+       else
+       return 0.5;
+    }
+}
+
+https://leetcode.com/problems/airplane-seat-assignment-probability/description/
